@@ -1,0 +1,16 @@
+stages:
+  preprocess:
+    cmd: python steps/preprocess.py
+    deps:
+      - data/raw/bangalore.xlsx
+      - steps/preprocess.py
+    outs:
+      - data/processed/clean_data.csv
+
+  train:
+    cmd: python steps/model_pipeline.py
+    deps:
+      - data/processed/clean_data.csv
+      - steps/model_pipeline.py
+    outs:
+      - models/model.pkl
