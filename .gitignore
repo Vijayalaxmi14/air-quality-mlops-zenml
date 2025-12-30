@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+zenml-env/
+
+# ZenML
+.zen/
+mlruns/
+artifacts/
+
+# Data (large files)
+data/raw/
+data/processed/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
